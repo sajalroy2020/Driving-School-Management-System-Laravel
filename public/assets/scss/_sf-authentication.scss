@@ -1,0 +1,66 @@
+.zMain {
+  &-signLog {
+    // &-wrap {
+    //   min-height: 100vh;
+    //   max-height: 100vh;
+    // }
+    &-content {
+      // max-width: toRem(491);
+      // margin: 0 auto;
+      // height: 100vh;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      border: 1px solid #d9d9d9;
+      padding: 74px 62px;
+      background: linear-gradient(180deg, #fefefe 0%, #ffffff 100%);
+      @media screen and (max-width: 575px) {
+        padding: 30px;
+      }
+    }
+    // &-img {
+    //   height: 100vh;
+    //   &[data-background] {
+    //     background-size: contain;
+    //   }
+    // }
+  }
+}
+
+.signLog-section {
+  height: 100vh;
+  display: flex;
+  background-color: #fff;
+  overflow-y: hidden;
+  .left,
+  .right {
+    width: toRem(615);
+    margin: 0 auto;
+    // height: 100%;
+  }
+  .left {
+    // padding: 30px;
+    // border-radius: toRem(20);
+    // @media screen and (max-width: 991px) {
+    //   width: 100%;
+    // }
+    // @media screen and (max-width: 575px) {
+    //   padding: 10px;
+    // }
+    .wrap {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @media screen and (max-width: 575px) {
+        padding: 0 10px;
+      }
+    }
+  }
+  .right {
+    position: relative;
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+}

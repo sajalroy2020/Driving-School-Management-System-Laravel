@@ -1,0 +1,45 @@
+$theme-colors: (
+  "white": var(--white),
+  "black": var(--black),
+  "body-bg": var(--body-bg),
+  "primary-color": var(--primary-color),
+  "main-color": var(--main-color),
+  "para-text": var(--para-text),
+  "stroke": var(--stroke),
+  "white-200": var(--white-200),
+  "cancel": var(--cancel),
+  "secondary": var(--secondary),
+  "red": var(--red),
+  "yellow": var(--yellow),
+  "positive-yellow": var(--positive-yellow),
+  "alert": var(--alert),
+  "positive-alert": var(--positive-alert),
+  "progress": var(--progress),
+  "pogress-alert": var(--pogress-alert),
+  "positive-para-text": var(--positive-para-text),
+  "green": var(--green),
+  "green-2": var(--green-2),
+  "positive-bg": var(--positive-bg),
+  "blue": var(--blue),
+  "positive-blue": var(--positive-blue),
+  "scroll-track": var(--scroll-track),
+  "scroll-thumb": var(--scroll-thumb),
+);
+/* Text color */
+@each $key, $color in $theme-colors {
+  .text-#{$key} {
+    color: $color !important;
+  }
+}
+/* Background Color */
+@each $key, $color in $theme-colors {
+  .bg-#{$key} {
+    background-color: $color !important;
+  }
+}
+/* Border Color */
+@each $key, $color in $theme-colors {
+  .bd-c-#{$key} {
+    border-color: $color !important;
+  }
+}

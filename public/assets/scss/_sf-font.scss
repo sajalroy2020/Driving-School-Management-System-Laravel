@@ -1,0 +1,121 @@
+/* Fnot size */
+$fs-array: 0;
+@each $fs in $fs-array {
+  .fs-#{$fs} {
+    font-size: toRem($fs);
+  }
+}
+@for $fs from 10 through 30 {
+  .fs-#{$fs} {
+    font-size: toRem($fs) !important;
+  }
+}
+$fs-xxl-array: 0;
+@each $fs-xxl in $fs-xxl-array {
+  .fs-xxl-#{$fs-xxl} {
+    @media screen and (min-width: 1400px) {
+      font-size: toRem($fs-xxl);
+    }
+  }
+}
+$fs-xl-array: 0;
+@each $fs-xl in $fs-xl-array {
+  .fs-xl-#{$fs-xl} {
+    @media screen and (min-width: 1200px) {
+      font-size: toRem($fs-xl);
+    }
+  }
+}
+$fs-lg-array: 0;
+@each $fs-lg in $fs-lg-array {
+  .fs-lg-#{$fs-lg} {
+    @media screen and (min-width: 992px) {
+      font-size: toRem($fs-lg);
+    }
+  }
+}
+$fs-md-array: 0;
+@each $fs-md in $fs-md-array {
+  .fs-md-#{$fs-md} {
+    @media screen and (min-width: 768px) {
+      font-size: toRem($fs-md);
+    }
+  }
+}
+$fs-sm-array: 0;
+@each $fs-sm in $fs-sm-array {
+  .fs-sm-#{$fs-sm} {
+    @media screen and (min-width: 576px) {
+      font-size: toRem($fs-sm);
+    }
+  }
+}
+/* Font weight */
+$fw-array: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000;
+@each $fw in $fw-array {
+  .fw-#{$fw} {
+    font-weight: #{$fw};
+  }
+}
+/* Line Height */
+$lh-array: 48;
+@each $lh in $lh-array {
+  .lh-#{$lh} {
+    line-height: toRem($lh);
+  }
+}
+@for $lh from 10 through 30 {
+  .lh-#{$lh} {
+    line-height: toRem($lh) !important;
+  }
+}
+$lh-xxl-array: 0;
+@each $lh-xxl in $lh-xxl-array {
+  .lh-xxl-#{$lh-xxl} {
+    @media screen and (min-width: 1400px) {
+      line-height: toRem($lh-xxl);
+    }
+  }
+}
+$lh-xl-array: 0;
+@each $lh-xl in $lh-xl-array {
+  .lh-xl-#{$lh-xl} {
+    @media screen and (min-width: 1200px) {
+      line-height: toRem($lh-xl);
+    }
+  }
+}
+$lh-lg-array: 0;
+@each $lh-lg in $lh-lg-array {
+  .lh-lg-#{$lh-lg} {
+    @media screen and (min-width: 992px) {
+      line-height: toRem($lh-lg);
+    }
+  }
+}
+$lh-md-array: 0;
+@each $lh-md in $lh-md-array {
+  .lh-md-#{$lh-md} {
+    @media screen and (min-width: 768px) {
+      line-height: toRem($lh-md);
+    }
+  }
+}
+$lh-sm-array: 0;
+@each $lh-sm in $lh-sm-array {
+  .lh-sm-#{$lh-sm} {
+    @media screen and (min-width: 576px) {
+      line-height: toRem($lh-sm);
+    }
+  }
+}
+/* Letter Spacing */
+@for $ls from 1 through 10 {
+  .ls-#{$ls} {
+    letter-spacing: toRem($ls);
+  }
+}
+/* text justify */
+.text-justify {
+  text-align: justify;
+}

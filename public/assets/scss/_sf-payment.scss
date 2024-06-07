@@ -1,0 +1,52 @@
+.payment-item {
+  flex: 1 0 auto;
+  max-width: toRem(187);
+  min-width: toRem(187);
+  height: toRem(182);
+  border: toRem(1) solid $stroke;
+  border-radius: toRem(9);
+  padding: toRem(24) toRem(18);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  @media screen and (max-width: 1199px) {
+    max-width: toRem(177);
+    min-width: toRem(177);
+  }
+  @media screen and (max-width: 991px) {
+    max-width: 100%;
+    min-width: toRem(180);
+  }
+  .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $body-bg;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    max-height: 88px;
+    min-height: 88px;
+    height: 100%;
+    img {
+      max-width: toRem(124);
+      max-height: toRem(69);
+    }
+  }
+  .link {
+    display: inline-block;
+    padding: toRem(13) toRem(25);
+    @include fontFamily(16, $fw_semiBold, 19, $main-color);
+    border: toRem(1) solid $main-color;
+    border-radius: toRem(12);
+    white-space: nowrap;
+  }
+  &:hover {
+    .link {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+}

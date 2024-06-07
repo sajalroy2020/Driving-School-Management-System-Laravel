@@ -1,0 +1,267 @@
+.zSidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: toRem(250);
+  background-color: $sidebar-bg;
+  // padding: toRem(23) 0 toRem(30);
+  z-index: 1001;
+  transition: all 0.5s ease;
+  @media screen and (max-width: 1023px) {
+    left: calc(-1 * toRem(250));
+  }
+}
+.zSidebar {
+  .zSidebar {
+    &-overlay {
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      background: rgb(0 0 0 / 50%);
+      z-index: -1;
+    }
+    &-leftBar {
+      position: absolute;
+      left: 30px;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: $black;
+    }
+  }
+  &.menuClose {
+    @media screen and (max-width: 1023px) {
+      left: 0;
+    }
+    .zSidebar-overlay {
+      opacity: 1;
+      visibility: visible;
+      width: calc(100% - toRem(250));
+    }
+  }
+}
+.zSidebar {
+  &-logo {
+    padding: toRem(25) toRem(15) toRem(48);
+    display: inline-block;
+    max-width: toRem(167);
+  }
+  &-menu {
+    > li {
+      position: relative;
+      padding: 0 toRem(12) 0 toRem(14);
+      &.sidebar-divider {
+        border-top: toRem(1) solid $black;
+        padding: toRem(10) toRem(11) toRem(9) toRem(23);
+        margin: 0 toRem(13) 0 toRem(4);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &:not(&.sidebar-divider) {
+        margin-bottom: toRem(5);
+        // &.sidebar-divider {
+        //   border-top: toRem(1) solid $black;
+        //   padding-top: toRem(30);
+        //   margin-top: toRem(30);
+        //   display: flex;
+        //   justify-content: space-between;
+        //   align-items: center;
+        // }
+      }
+      &:first-child {
+        &.sidebar-divider {
+          padding-top: 0;
+          border-top: none;
+        }
+      }
+      // &:not(:first-child) {
+      //   &.sidebar-divider {
+      //     border-top: toRem(1) solid $black;
+      //     padding: toRem(10) toRem(12) toRem(9);
+      //     margin: 0 toRem(12);
+      //     display: flex;
+      //     justify-content: space-between;
+      //     align-items: center;
+      //   }
+      // }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      svg {
+        max-width: 16px;
+        max-height: 16px;
+      }
+      > a {
+        position: relative;
+        padding: toRem(13) toRem(15);
+        // svg {
+        //   path,
+        //   circle,
+        //   rect {
+        //     fill: $para-text;
+        //   }
+        // }
+        span {
+          @include fontFamily(14, $fw_semiBold, 14, #8f96b2);
+        }
+        &::before {
+          // content: "\f105";
+          // position: absolute;
+          // font-family: "Font Awesome 6 Free";
+          // font-size: toRem(13);
+          // font-weight: 700;
+          // color: $white-70;
+          // top: 0;
+          // right: toRem(16);
+          // height: 100%;
+          // line-height: toRem(48);
+          // opacity: 0;
+          // visibility: hidden;
+          // -webkit-transition: -webkit-transform 0.3s;
+          // transition: -webkit-transform 0.3s;
+          // -o-transition: transform 0.3s;
+          // transition: transform 0.3s;
+          // transition: transform 0.3s, -webkit-transform 0.3s;
+          position: absolute;
+          content: "";
+          width: 0.5em;
+          height: 0.5em;
+          border-width: 1px 0 0 1px;
+          border-style: solid;
+          border-color: $para-text;
+          right: 1em;
+          transform: rotate(135deg) translate(0, -50%);
+          transform-origin: top;
+          top: 50%;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease-out;
+        }
+        ~ div .zSidebar-submenu {
+          padding: toRem(10) 0 toRem(10) toRem(40);
+          li {
+            padding-bottom: toRem(6);
+            &:last-child {
+              padding-bottom: 0;
+            }
+            a {
+              position: relative;
+              padding-left: toRem(12);
+              display: block;
+              @include fontFamily(12, $fw_medium, 15, $para-text);
+              &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: toRem(5);
+                height: toRem(2);
+                background-color: $para-text;
+              }
+              &:hover,
+              &.active {
+                color: $primary-color;
+                &::before {
+                  background-color: $primary-color;
+                }
+              }
+            }
+          }
+        }
+        &.has-subMenu-arrow {
+          &::before {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        &:has(~ div ul.zSidebar-submenu li) {
+          &::before {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        &[aria-expanded="true"] {
+          &::before {
+            transform: rotate(227deg);
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -16px;
+          transform: translateY(-50%);
+          width: toRem(2);
+          height: 100%;
+          background-color: $primary-color;
+          transition: all 0.3s;
+        }
+        &:hover,
+        &.active {
+          background-color: rgba(46, 113, 61, 0.23);
+          svg {
+            path,
+            circle,
+            rect {
+              fill: $primary-color;
+            }
+          }
+          &.stroke-icon {
+            &-1 {
+              svg {
+                path {
+                  fill: transparent !important;
+                  stroke: $primary-color;
+                }
+              }
+            }
+            &-2 {
+              svg {
+                path {
+                  &:last-child {
+                    fill: transparent !important;
+                    stroke: $primary-color;
+                  }
+                }
+              }
+            }
+          }
+          span {
+            color: $white;
+          }
+          &::before {
+            border-color: $primary-color;
+          }
+          &::after {
+            left: -12px;
+          }
+        }
+        // &.active {
+        //   ~ .collapse {
+        //     display: block !important;
+        //   }
+        // }
+      }
+    }
+  }
+  &-fixed {
+    max-height: calc(100% - toRem(85));
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none !important;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --body-bg: #f6f6f6;
+  --primary-color: #4fa33a;
+  --main-color: #01091a;
+  --para-text: #5d697a;
+  --stroke: #eef1f3;
+  --white-200: #f9f9fb;
+  --cancel: #ebedf0;
+  --secondary: #f5f7fa;
+  --red: #f63e04;
+  --yellow: #fd8900;
+  --positive-yellow: #fff2e2;
+  --alert: #fd4c00;
+  --positive-alert: rgba(253 76 0 / 0.1);
+  --progress: #7a5af8;
+  --positive-progress: rgba(122, 90, 248, 0.1);
+  --positive-para-text: #e9e9e9;
+  --green: #0ba24b;
+  --green-2: #11854f;
+  --positive-bg: #ddffde;
+  --blue: #007aff;
+  --positive-blue: #e5f0fb;
+  --sidebar-bg: #192216;
+  --scroll-track: #efefef;
+  --scroll-thumb: #dadada;
+  // Form
+  --sf-form-label-margin-bottom: 8px;
+  --sf-form-label-font-size: 14px;
+  --sf-form-label-font-weight: 500;
+  --sf-form-label-line-height: 20px;
+  --sf-form-label-font-color: #01091a;
+  --sf-form-control-padding-top: 13px;
+  --sf-form-control-padding-left: 20px;
+  --sf-form-control-padding-bottom: 15px;
+  --sf-form-control-padding-right: 20px;
+  --sf-form-control-font-size: 14px;
+  --sf-form-control-font-weight: 400;
+  --sf-form-control-line-height: 22px;
+  --sf-form-control-font-color: #01091a;
+  --sf-form-control-placeholder-font-color: #5d697a;
+  --sf-form-control-background-color: #fff;
+  --sf-form-control-border-color: #eef1f3;
+  --sf-form-control-hover-border-color: #4fa33a;
+  --sf-form-control-border-radius: 8px;
+  --sf-form-control-textarea-background-color: #fff;
+  --sf-form-control-textarea-border-color: #eef1f3;
+}
+
+// Font Family
+$inter-tight: "Inter Tight", sans-serif;
+// Default
+$section-bg: var(--main-color);
+$fontAesome: "Font Awesome 6 Free";
+// Font Weight
+$fw_thin: 100;
+$fw_extraLight: 200;
+$fw_light: 300;
+$fw_regular: 400;
+$fw_medium: 500;
+$fw_semiBold: 600;
+$fw_bold: 700;
+$fw_extraBold: 800;
+$fw_black: 900;
+$fw_weight: 1000;
+// Body
+$body-bg: var(--body-bg);
+$bodyFont: $inter-tight;
+$body-text-color: var(--para-text);
+// Color
+$white: var(--white);
+$black: var(--black);
+$body-bg: var(--body-bg);
+$primary-color: var(--primary-color);
+$main-color: var(--main-color);
+$para-text: var(--para-text);
+$stroke: var(--stroke);
+$white-200: var(--white-200);
+$cancel: var(--cancel);
+$secondary: var(--secondary);
+$red: var(--red);
+$yellow: var(--yellow);
+$positive-yellow: var(--positive-yellow);
+$alert: var(--alert);
+$positive-alert: var(--positive-alert);
+$progress: var(--progress);
+$positive-progress: var(--positive-progress);
+$positive-para-text: var(--positive-para-text);
+$green: var(--green);
+$green-2: var(--green-2);
+$positive-bg: var(--positive-bg);
+$blue: var(--blue);
+$positive-blue: var(--positive-blue);
+$sidebar-bg: var(--sidebar-bg);
+$scroll-track: var(--scroll-track);
+$scroll-thumb: var(--scroll-thumb);
+// Form label
+$sf-form-label-margin-bottom: var(--sf-form-label-margin-bottom);
+$sf-form-label-font-size: var(--sf-form-label-font-size);
+$sf-form-label-font-weight: var(--sf-form-label-font-weight);
+$sf-form-label-line-height: var(--sf-form-label-line-height);
+$sf-form-label-font-color: var(--sf-form-label-font-color);
+// Form control
+$sf-form-control-padding-top: var(--sf-form-control-padding-top);
+$sf-form-control-padding-left: var(--sf-form-control-padding-left);
+$sf-form-control-padding-bottom: var(--sf-form-control-padding-bottom);
+$sf-form-control-padding-right: var(--sf-form-control-padding-right);
+$sf-form-control-font-size: var(--sf-form-control-font-size);
+$sf-form-control-font-weight: var(--sf-form-control-font-weight);
+$sf-form-control-line-height: var(--sf-form-control-line-height);
+$sf-form-control-font-color: var(--sf-form-control-font-color);
+$sf-form-control-placeholder-font-color: var(--sf-form-control-placeholder-font-color);
+$sf-form-control-background-color: var(--sf-form-control-background-color);
+$sf-form-control-border-color: var(--sf-form-control-border-color);
+$sf-form-control-hover-border-color: var(--sf-form-control-hover-border-color);
+$sf-form-control-border-radius: var(--sf-form-control-border-radius);
+$sf-form-control-textarea-background-color: var(--sf-form-control-textarea-background-color);
+$sf-form-control-textarea-border-color: var(--sf-form-control-textarea-border-color);

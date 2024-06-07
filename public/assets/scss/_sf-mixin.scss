@@ -1,0 +1,38 @@
+@mixin background-content($repeat: no-repeat, $size: cover, $position: center center) {
+  background-repeat: $repeat;
+  background-size: $size;
+  background-position: $position;
+}
+@mixin overlay($opacity: $opacity) {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: $opacity;
+  z-index: 0;
+  z-index: -1;
+}
+@mixin flex-position($display, $contet, $items) {
+  display: $display;
+  justify-content: $contet;
+  align-items: $items;
+  flex-flow: row wrap;
+}
+@mixin center-position($top: $top, $left: $top) {
+  position: absolute;
+  top: $top;
+  left: $top;
+  transform: translate(-#{$top}, -#{$top});
+}
+@function toRem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}
+@mixin fontFamily($fontSize, $fontWeight, $lineHeight, $textColor) {
+  font-size: toRem($fontSize);
+  font-weight: $fontWeight;
+  line-height: toRem($lineHeight);
+  color: $textColor;
+}

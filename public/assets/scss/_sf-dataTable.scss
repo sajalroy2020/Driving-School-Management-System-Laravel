@@ -1,0 +1,139 @@
+.dataTables_wrapper {
+  .tableSearch {
+    position: relative;
+    max-width: toRem(357);
+    width: 100%;
+    @media screen and (max-width: 575px) {
+      max-width: 100%;
+    }
+    .dataTables_filter {
+      position: relative;
+      width: 100%;
+      label {
+        width: 100%;
+      }
+      .searchIcon {
+        position: absolute;
+        top: 50%;
+        left: toRem(18);
+        display: flex;
+        max-height: toRem(18);
+        transform: translateY(-50%);
+      }
+      input {
+        width: 100%;
+        border: toRem(1) solid $primary-color;
+        border-radius: toRem(110) !important;
+        padding: toRem(14) toRem(18) toRem(13) toRem(45) !important;
+        background-color: $primary-color !important;
+        margin-left: 0 !important;
+        @include fontFamily(14, $fw_regular, 17, $primary-color !important);
+        &::-webkit-search-cancel-button {
+          -webkit-appearance: none;
+          appearance: none;
+          height: toRem(13);
+          width: toRem(13);
+          background-image: url(../images/icon/delete.svg);
+          background-size: toRem(13) toRem(13);
+        }
+        &:focus {
+          border-color: $primary-color !important;
+        }
+        &::-webkit-input-placeholder {
+          @include fontFamily(14, $fw_regular, 17, $primary-color !important);
+        }
+        &::-moz-placeholder {
+          @include fontFamily(14, $fw_regular, 17, $primary-color !important);
+        }
+        &:-ms-input-placeholder {
+          @include fontFamily(14, $fw_regular, 17, $primary-color !important);
+        }
+        &::-ms-input-placeholder {
+          @include fontFamily(14, $fw_regular, 17, $primary-color !important);
+        }
+        &::placeholder {
+          @include fontFamily(14, $fw_regular, 17, $primary-color !important);
+        }
+      }
+    }
+  }
+}
+.tableTop {
+  .row {
+    row-gap: toRem(10);
+  }
+}
+
+.tableTop {
+  padding-bottom: toRem(20);
+}
+.tableBottom {
+  padding-top: toRem(20);
+}
+.tableLengthInput {
+  @media screen and (max-width: 575px) {
+    float: none !important;
+  }
+  label {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    @include fontFamily(14, $fw_regular, 17, $primary-color);
+    @media screen and (max-width: 575px) {
+      justify-content: center;
+    }
+  }
+  select {
+    border: toRem(1) solid var(--black-5) !important;
+    border-radius: toRem(8) !important;
+    background-color: var(--colorThree) !important;
+    padding: toRem(11) toRem(15) !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    @include fontFamily(18, $fw_medium, 22, $primary-color !important);
+    text-align: center;
+  }
+}
+.tableInfo {
+  .dataTables_info {
+    @include fontFamily(14, $fw_regular, 17, $para-text);
+    padding-top: 0;
+  }
+}
+.tablePagi {
+  .paginate_button {
+    padding: toRem(7) toRem(11) toRem(6) !important;
+    color: $para-text !important;
+    border: toRem(1) solid $black !important;
+    border-radius: toRem(6) !important;
+    background: $white !important;
+    width: toRem(30);
+    height: toRem(30);
+    line-height: toRem(17) !important;
+    font-size: toRem(14);
+    font-weight: $fw_regular;
+    margin-left: toRem(8) !important;
+    &.current,
+    &:hover {
+      color: $white !important;
+      background: $main-color !important;
+      border-color: $main-color !important;
+    }
+  }
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: $para-text !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous,
+.dataTables_wrapper .dataTables_paginate .paginate_button.next {
+  font-size: toRem(10) !important;
+  color: $para-text !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  color: $white !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+  color: $white !important;
+}

@@ -1,0 +1,201 @@
+.zImage-upload {
+  &-details {
+    position: relative;
+    .zImage-inside {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+    label {
+      z-index: 10 !important;
+    }
+    .upload-img-box {
+      background-color: $white;
+      border: toRem(2) solid $stroke;
+      border-radius: toRem(12);
+      height: toRem(220);
+      position: relative;
+      overflow: hidden;
+      img {
+        background-color: $white;
+      }
+    }
+  }
+}
+// Profile Image preview
+.profileImage-upload {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  height: toRem(80);
+  max-width: toRem(80);
+  position: relative;
+  > img {
+    background-color: $black;
+    width: toRem(80);
+    height: toRem(80);
+    border-radius: 50%;
+  }
+  .icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: toRem(25);
+    height: toRem(25);
+    border: 1px solid $white;
+    border-radius: 50%;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    cursor: pointer;
+    img {
+      position: relative;
+      max-width: toRem(13);
+      max-height: toRem(11);
+      top: auto;
+      left: auto;
+      transform: translate(0);
+    }
+  }
+  input {
+    top: auto !important;
+    left: auto !important;
+    max-width: toRem(38);
+    height: toRem(38);
+    border: toRem(1) solid #fff;
+    border-radius: 50%;
+    background-color: $primary-color;
+    cursor: pointer;
+  }
+}
+// Photo upload file
+.servicePhotoUpload {
+  label {
+    max-width: toRem(386);
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 576px) {
+      width: 100%;
+      flex: 1 0 auto;
+    }
+    p {
+      &:first-child {
+        flex: 1 1 auto;
+        border: toRem(1) solid $black;
+        border-right: 0;
+        padding: toRem(15) toRem(15) toRem(14);
+        border-radius: toRem(5) 0 0 toRem(5);
+        @media screen and (max-width: 575px) {
+          flex: 0 0 auto;
+          border-radius: toRem(5) toRem(5) 0 0;
+          border-bottom: 0;
+          border-right: toRem(1) solid $black;
+          width: 100%;
+          text-align: center;
+        }
+      }
+      &:last-child {
+        border-radius: 0 toRem(5) toRem(5) 0;
+        background-color: $black;
+        padding: toRem(15) toRem(38) toRem(14);
+        @media screen and (max-width: 575px) {
+          border-radius: 0 0 toRem(5) toRem(5);
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.file-upload-one {
+  label {
+    max-width: toRem(386);
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 576px) {
+      width: 100%;
+      flex: 1 0 auto;
+    }
+    p {
+      &:first-child {
+        flex: 1 1 auto;
+        border: toRem(1) solid $black;
+        border-right: 0;
+        padding: toRem(15) toRem(15) toRem(14);
+        border-radius: toRem(5) 0 0 toRem(5);
+        @media screen and (max-width: 575px) {
+          flex: 0 0 auto;
+          border-radius: toRem(5) toRem(5) 0 0;
+          border-bottom: 0;
+          border-right: toRem(1) solid $black;
+          width: 100%;
+          text-align: center;
+        }
+      }
+      &:last-child {
+        border-radius: 0 toRem(5) toRem(5) 0;
+        background-color: $black;
+        padding: toRem(15) toRem(38) toRem(14);
+        @media screen and (max-width: 575px) {
+          border-radius: 0 0 toRem(5) toRem(5);
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+#files-names {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: toRem(10);
+  .file-block {
+    position: relative;
+    margin-top: toRem(10);
+    flex: 0 0 auto;
+    min-width: toRem(70);
+    max-width: toRem(150);
+    padding: toRem(10);
+    border: toRem(1) solid $stroke;
+    border-radius: toRem(10);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: toRem(10);
+    .file-icon {
+      display: inline-flex;
+      font-size: toRem(16);
+      color: $para-text;
+    }
+    .name {
+      @include fontFamily(14, $fw_regular, 17, $black);
+    }
+    .file-delete {
+      position: absolute;
+      top: toRem(10);
+      right: toRem(10);
+      flex: 0 0 auto;
+      width: toRem(13.5);
+      height: toRem(13.5);
+      border: 1px solid $para-text;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: toRem(10);
+      color: $para-text;
+      cursor: pointer;
+    }
+  }
+}

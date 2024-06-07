@@ -1,0 +1,43 @@
+.project {
+  &-item {
+    display: block;
+    background-color: $white;
+    border: 1px solid $stroke;
+    border-radius: 10px;
+    padding: 16px;
+    .titleStatus {
+      padding-bottom: 20px;
+    }
+    .startEndDate {
+      max-width: 168px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      gap: 10px;
+      .item {
+        .title {
+          font-size: 14px;
+          font-weight: $fw_medium;
+          line-height: 14px;
+          color: $para-text;
+          padding-bottom: 7px;
+        }
+        .info {
+          font-size: 12px;
+          font-weight: $fw_medium;
+          line-height: 12px;
+          color: $para-text;
+        }
+      }
+    }
+    .progress {
+      height: 8px;
+      background-color: $stroke;
+      border-radius: 50px;
+      &-bar {
+        border-radius: 50px;
+        background-color: $primary-color;
+      }
+    }
+  }
+}

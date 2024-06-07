@@ -1,0 +1,72 @@
+.certificate-box{
+    position: relative;
+}
+.certificate-img{
+    max-width: 100%;
+    height: auto;
+}
+.certificate-body p{
+    width: 70%;
+}
+
+.print-div{
+    width: 684px;
+    height: 488px;
+}
+
+/* ========= chenges css ========== */
+.certificate-num{
+    position: absolute;
+    top: 65px;
+    left: 300px;
+}
+.certificate-title{
+    position: absolute;
+    font-family: initial;
+    top: 100px;
+    left: 250px;
+}
+.certificate-date{
+    position: absolute;
+    font-family: math;
+    top: 170px;
+    left: 300px;
+}
+.student-name{
+    position: absolute;
+    top: 200px;
+    left: 280px;
+}
+.certificate-body{
+    position: absolute;
+    top: 250px;
+    left: 0px;
+}
+.instructor-signature{
+    position: absolute;
+    top: 360px;
+    left: 135px;
+    width: 10%;
+}
+.admin-signature{
+    position: absolute;
+    top: 360px;
+    left: 480px;
+    width: 10%;
+}
+.certificate-logo{
+    position: absolute;
+    top: 355px;
+    left: 308px;
+    width: 10%;
+}
+.signature-title-1{
+    position: absolute;
+    top: 384px;
+    left: 135px;
+}
+.signature-title-2{
+    position: absolute;
+    top: 384px;
+    left: 470px;
+}
